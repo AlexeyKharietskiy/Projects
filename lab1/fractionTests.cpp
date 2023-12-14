@@ -10,7 +10,7 @@ namespace fractionTests
 	{
 	public:
 		
-		TEST_METHOD(TestMethod1)
+		TEST_METHOD(TestGetSet)
 		{
 			Natural_fraction a;
 			a.set_numerator(7);
@@ -19,7 +19,7 @@ namespace fractionTests
 			a.get_numerator();
 			a.get_denominator();
 		}
-		TEST_METHOD(TestMethod2)
+		TEST_METHOD(TestOperators)
 		{
 			Natural_fraction a,b,c;
 			b.set_numerator(8);
@@ -43,7 +43,7 @@ namespace fractionTests
 			a *= c;
 			b /= a;
 		}
-		TEST_METHOD(TestMethod3)
+		TEST_METHOD(TestInDecrement)
 		{
 			Natural_fraction a;
 			++a;
@@ -51,7 +51,7 @@ namespace fractionTests
 			a--;
 			--a;
 		}
-		TEST_METHOD(TestMethod4)
+		TEST_METHOD(TestLogic)
 		{
 			Natural_fraction a, b;
 			a.set_numerator(1);
