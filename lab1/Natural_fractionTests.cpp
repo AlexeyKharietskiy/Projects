@@ -1,6 +1,6 @@
 #include "pch.h"
 #include "CppUnitTest.h"
-#include "..//ppois1/fraction.h"
+#include "..//ppois1/Natural_fraction.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
