@@ -23,15 +23,15 @@ public:
     void normalise();
     void denormalise();
 
-    Natural_fraction operator +(Natural_fraction& a);
-    Natural_fraction operator -(Natural_fraction& a);
-    Natural_fraction operator *(Natural_fraction& a);
-    Natural_fraction operator /(Natural_fraction& a);
+    Natural_fraction operator +(const Natural_fraction& a);
+    Natural_fraction operator -(const Natural_fraction& a);
+    Natural_fraction operator *(const Natural_fraction& a);
+    Natural_fraction operator /(const Natural_fraction& a);
 
-    Natural_fraction operator +=(Natural_fraction& a);
-    Natural_fraction operator -=(Natural_fraction& a);
-    Natural_fraction operator *=(Natural_fraction& a);
-    Natural_fraction operator /=(Natural_fraction& a);
+    Natural_fraction operator +=(const Natural_fraction& a);
+    Natural_fraction operator -=(const Natural_fraction& a);
+    Natural_fraction operator *=(const Natural_fraction& a);
+    Natural_fraction operator /=(const Natural_fraction& a);
 
     Natural_fraction operator +(const int a);
     Natural_fraction operator -(const int a);
@@ -48,10 +48,10 @@ public:
     Natural_fraction& operator--();
     Natural_fraction operator--(int);
 
-    bool operator >(Natural_fraction& a);
-    bool operator <(Natural_fraction& a);
-    bool operator >=(Natural_fraction& a);
-    bool operator <=(Natural_fraction& a);
+    bool operator >(const Natural_fraction& a);
+    bool operator <(const Natural_fraction& a);
+    bool operator >=(const Natural_fraction& a);
+    bool operator <=(const Natural_fraction& a);
     bool operator>(double a);
     bool operator<(double a);
     bool operator>=(double a);
