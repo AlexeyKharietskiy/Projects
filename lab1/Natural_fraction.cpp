@@ -99,44 +99,44 @@ void Natural_fraction::check(int& i)
     }
 }
 
-Natural_fraction Natural_fraction::operator +(Natural_fraction& a) {
+Natural_fraction Natural_fraction::operator +( const Natural_fraction& a) {
     Natural_fraction result;
     result.denominator = a.denominator * denominator;
     result.numerator = (a.numerator * denominator) + (numerator * a.denominator);
     return result;
 }
-Natural_fraction Natural_fraction::operator -(Natural_fraction& a) {
+Natural_fraction Natural_fraction::operator -(const Natural_fraction& a) {
     Natural_fraction result;
     result.denominator = a.denominator * denominator;
     result.numerator = (numerator * a.denominator) - (a.numerator * denominator);
     return result;
 }
-Natural_fraction Natural_fraction::operator *(Natural_fraction& a) {
+Natural_fraction Natural_fraction::operator *(const Natural_fraction& a) {
     Natural_fraction result;
     result.denominator = a.denominator * denominator;
     result.numerator = a.numerator * numerator;
     return result;
 }
-Natural_fraction Natural_fraction::operator /(Natural_fraction& a) {
+Natural_fraction Natural_fraction::operator /(const Natural_fraction& a) {
     Natural_fraction result;
     result.denominator = denominator * a.numerator;
     result.numerator = numerator * a.denominator;
     return result;
 }
 
-Natural_fraction Natural_fraction::operator +=(Natural_fraction& a) {
+Natural_fraction Natural_fraction::operator +=(const Natural_fraction& a) {
     *this = *this + a;
     return *this;
 }
-Natural_fraction Natural_fraction::operator -=(Natural_fraction& a) {
+Natural_fraction Natural_fraction::operator -=(const Natural_fraction& a) {
     *this = *this - a;
     return *this;
 }
-Natural_fraction Natural_fraction::operator *=(Natural_fraction& a) {
+Natural_fraction Natural_fraction::operator *=(const Natural_fraction& a) {
     *this = *this * a;
     return *this;
 }
-Natural_fraction Natural_fraction::operator /=(Natural_fraction& a) {
+Natural_fraction Natural_fraction::operator /=(const Natural_fraction& a) {
     *this = *this / a;
     return *this;
 }
@@ -146,30 +146,30 @@ Natural_fraction& Natural_fraction::operator++() {
     return *this;
 }
 Natural_fraction Natural_fraction::operator++(int) {
-    Natural_fraction rezult = *this;
+    Natural_fraction temp = *this;
     ++(*this);
-    return rezult;
+    return temp;
 }
 Natural_fraction& Natural_fraction::operator--() {
     numerator -= denominator;
     return *this;
 }
 Natural_fraction Natural_fraction::operator--(int) {
-    Natural_fraction rezult = *this;
+    Natural_fraction temp = *this;
     --(*this);
-    return rezult;
+    return temp;
 }
 
-bool Natural_fraction::operator>(Natural_fraction& a) {
+bool Natural_fraction::operator>(const Natural_fraction& a) {
     return (numerator * a.denominator) > (a.numerator * denominator);
 }
-bool Natural_fraction::operator>=(Natural_fraction& a) {
+bool Natural_fraction::operator>=(const Natural_fraction& a) {
     return (numerator * a.denominator) >= (a.numerator * denominator);
 }
-bool Natural_fraction::operator<(Natural_fraction& a) {
+bool Natural_fraction::operator<(const Natural_fraction& a) {
     return (numerator * a.denominator) < (a.numerator * denominator);
 }
-bool Natural_fraction::operator<=(Natural_fraction& a) {
+bool Natural_fraction::operator<=(const Natural_fraction& a) {
     return (numerator * a.denominator) <= (a.numerator * denominator);
 }
 
