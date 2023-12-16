@@ -1,4 +1,4 @@
-﻿#include "pch.h"
+#include "pch.h"
 #include "CppUnitTest.h"
 #include "..//ppois1/fraction.h"
 
@@ -10,7 +10,7 @@ namespace fractionTests
 	{
 	public:
 		
-		TEST_METHOD(TestGetSet)
+		TEST_METHOD(TestMethod1)
 		{
 			Natural_fraction a;
 			a.set_numerator(7);
@@ -18,8 +18,9 @@ namespace fractionTests
 			a.get_integer_part();
 			a.get_numerator();
 			a.get_denominator();
+			Assert::AreEqual(3, a.get_denominator());
 		}
-		TEST_METHOD(TestOperators)
+		TEST_METHOD(TestMethod2)
 		{
 			Natural_fraction a,b,c;
 			b.set_numerator(8);
@@ -27,6 +28,7 @@ namespace fractionTests
 			c.set_numerator(-5);
 			c.set_denominator(3);
 			a = b + c;
+			Assert::AreEqual(-17, a.get_numerator());
 			b = c - a;
 			c = b * a;
 			a = b / c;
@@ -43,15 +45,16 @@ namespace fractionTests
 			a *= c;
 			b /= a;
 		}
-		TEST_METHOD(TestInDecrement)
+		TEST_METHOD(TestMethod3)
 		{
 			Natural_fraction a;
 			++a;
 			a++;
 			a--;
 			--a;
+			Assert::AreEqual(0, a.get_integer_part());
 		}
-		TEST_METHOD(TestLogic)
+		TEST_METHOD(TestMethod4)
 		{
 			Natural_fraction a, b;
 			a.set_numerator(1);
@@ -60,6 +63,7 @@ namespace fractionTests
 			b.set_denominator(3);
 			if(a > b)
 			a++;
+			Assert::AreEqual(2, a.get_denominator());
 			if(a < b)
 			b++;
 			if(a >= b)
