@@ -1,5 +1,5 @@
 #pragma once
-#include "fraction.h"
+#include "Natural_fraction.h"
 #include <iostream>
 using namespace std;
 class Natural_fraction
