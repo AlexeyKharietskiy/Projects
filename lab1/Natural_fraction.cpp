@@ -146,18 +146,18 @@ Natural_fraction& Natural_fraction::operator++() {
     return *this;
 }
 Natural_fraction Natural_fraction::operator++(int) {
-    Natural_fraction temp = *this;
+    Natural_fraction rezult = *this;
     ++(*this);
-    return temp;
+    return rezult;
 }
 Natural_fraction& Natural_fraction::operator--() {
     numerator -= denominator;
     return *this;
 }
 Natural_fraction Natural_fraction::operator--(int) {
-    Natural_fraction temp = *this;
+    Natural_fraction rezult = *this;
     --(*this);
-    return temp;
+    return rezult;
 }
 
 bool Natural_fraction::operator>(Natural_fraction& a) {
